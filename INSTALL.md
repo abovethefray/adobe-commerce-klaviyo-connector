@@ -124,7 +124,20 @@ The UI lives in `src/commerce-backend-ui-1/web-src` and is deployed with the act
 - Page/Batch Size controls both fetch size and Klaviyo batch size (max 100; 5MB payload cap).
 - Set `ACCS_FE_URL` in `.env` to build product URLs for Klaviyo.
 
-## 12) Troubleshooting
+## 12) Storefront Integration Components
+
+To complete the Klaviyo integration for your Adobe Commerce storefront, install the following storefront components. Each repository includes a detailed README with installation and configuration instructions:
+
+- **[Klaviyo Tracking Block for Adobe Commerce Storefront](https://github.com/abovethefray/klaviyo-tracking-block-for-adobe-commerce-storefront)**  
+  Enables Klaviyo analytics and tracking on your Adobe Commerce storefront, capturing customer behavior and events.
+
+- **[Klaviyo Checkout Consent Drop-in for Adobe Commerce App](https://github.com/abovethefray/klaviyo-adobe-commerce-app-checkout-consent-dropin)**  
+  Provides a checkout consent drop-in component for collecting customer consent to receive marketing communications via Klaviyo.
+
+- **[Klaviyo Signup Block for Adobe Commerce Storefront](https://github.com/abovethefray/klaviyo-signup-block-for-adobe-commerce-storefront)**  
+  Adds newsletter signup blocks powered by Klaviyo to your Adobe Commerce storefront, allowing customers to subscribe to marketing lists.
+
+## 13) Troubleshooting
 - Timeouts: reduce Page/Batch Size (≤100) and ensure payload < 5MB
 - IMS/auth: re-run `aio login` and re-select org/project/workspace
 - Commerce API: verify integration credentials and scopes
