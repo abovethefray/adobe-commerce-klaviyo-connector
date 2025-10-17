@@ -1,6 +1,6 @@
 # Adobe Commerce Klaviyo Connector App
 
-A comprehensive Adobe Commerce to Klaviyo integration app that synchronizes customers, products, and orders with real-time progress tracking and configurable batch processing. This app also provides storefront integration components for tracking, consent management, and newsletter signups.
+A comprehensive Adobe Commerce to Klaviyo integration app that synchronizes customers, products, orders, and sales rules with real-time progress tracking and configurable batch processing. This app also provides storefront integration components for tracking, consent management, and newsletter signups.
 ## Changelog
 ### Version 1.0.0
 - Initial release
