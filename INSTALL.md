@@ -14,7 +14,7 @@ This guide explains how to install, configure, and deploy this Klaviyo App Build
 - Klaviyo Private API Key and API Revision
 
 ## 2) Download and bootstrap
-Download the app zip file from Adobe Commerce Marketplace (Exchange) and extract it, or clone from the repository if available:
+Download the app zip file from [Adobe Exchange](https://exchange.adobe.com/apps/browse/ec?appType=ABD&listingType=applications&page=1&partnerLevel=All&product=All&sort=RELEVANCE) and extract it, or clone from the repository if available:
 ```bash
 # If downloading from Exchange:
 unzip app.zip into klaviyo-app-builder folder
@@ -34,14 +34,6 @@ npm install -g @adobe/aio-cli
 aio plugins:install @adobe/aio-cli-plugin-api-mesh  # optional
 ```
 
-## Enable Admin UI SDK
-Enable the Admin UI SDK in your Adobe Commerce instance for both PaaS and SaaS:
-1. In your Adobe Commerce Admin, go to **Stores** > **Configuration** > **Advanced** > **Admin** > **Admin App**
-2. Set **Enable Admin App** to **Yes**
-3. Save the configuration
-
-For detailed configuration, see the [Admin UI SDK General Configuration guide](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/configuration/#general-configuration).
-
 ## Klaviyo account preparation
 
 Follow Klaviyo’s article on [how to create or clone a private API key](https://help.klaviyo.com/hc/en-us/articles/7423954176283) or [find API keys](https://help.klaviyo.com/hc/en-us/articles/115005062267#h_01HRFPP8R1AEVQ744SE33FQTEC) for users with existing keys
@@ -56,10 +48,11 @@ Fill `.env` with values (see README for key descriptions). Never commit `.env`.
       - Example: `https://na1-sandbox.api.commerce.adobe.com/[tenant-id]/`
     - PaaS: base URL should end with `/rest/V1`
       - Example: `https://[environment-name].us-4.magentosite.cloud/rest/V1`
-  - `COMMERCE_ADOBE_IO_EVENTS_MERCHANT_ID` - Your Adobe Commerce merchant/organization ID
+  - `COMMERCE_ADOBE_IO_EVENTS_MERCHANT_ID` - Your Adobe Commerce merchant/organization ID. Only alphanumeric characters and underscores (_) are allowed in this value.
   - `IO_CONSUMER_ID` - I/O Events consumer ID from Adobe Developer Console
   - `IO_PROJECT_ID` - App Builder project ID from Adobe Developer Console
   - `IO_WORKSPACE_ID` - App Builder workspace ID from Adobe Developer Console
+  - `EVENT_PREFIX` - Corresponds to a string that is prepended to an event name. It helps to uniquely identify events when multiple projects use the same event type
 - SaaS (Adobe Commerce as a Cloud Service) – IMS OAuth (required for SaaS)
   - `OAUTH_CLIENT_ID`
   - `OAUTH_CLIENT_SECRET`
