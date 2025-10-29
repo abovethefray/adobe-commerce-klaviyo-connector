@@ -82,3 +82,7 @@ See [INSTALL.md - Storefront Integration Components](INSTALL.md#12-storefront-in
 - General
     - Network/API rate limits from Adobe Commerce or Klaviyo can throttle syncs
     - For SaaS Commerce, prefer IMS (server‑to‑server) auth; for PaaS use Integration OAuth1
+
+## OpenTelemetry usage example
+
+Check the [How To Use](https://github.com/adobe/aio-lib-telemetry/blob/main/docs/usage.md#how-to-use) section in the `@adobe/aio-lib-telemetry` usage guide for comprehensive integration instructions.
